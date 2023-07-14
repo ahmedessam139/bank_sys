@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank System Report 1</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 24px;
+      color: #333;
+    }
+
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      color: #999;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 200px;
+    }
+
+    th,
+    td {
+      padding: 10px;
+      border: 1px solid #999;
+    }
+
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+
+    td {
+      text-align: center;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var dateElement = document.getElementById("date");
+      var currentDate = new Date();
+      dateElement.textContent = currentDate.toDateString();
+    });
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Bank System Report 1</h1>
+    </header>
+    <main>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Number of Transactions</th>
+            <th>Income</th>
+            <th>Outcome</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="employee-id">ABC123</td>
+            <td id="transaction-count">5</td>
+            <td id="income-amount">$5000</td>
+            <td id="outcome-amount">$3000</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+    <footer>
+      <p>Generated on: <span id="date"></span></p>
+    </footer>
+  </div>
+</body>
+
+</html>
