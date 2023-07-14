@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retrieve Bank System Report</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 24px;
+      color: #333;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"] {
+      padding: 5px;
+      width: 100%;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    fieldset {
+      margin:60px 0px;
+      padding: 20px ; 
+    }
+    
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var formElement = document.getElementById("data-form");
+
+      formElement.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        var system1TransactionCountElement = document.getElementById("system1-transaction-count");
+        var system1IncomeAmountElement = document.getElementById("system1-income-amount");
+        var system1OutcomeAmountElement = document.getElementById("system1-outcome-amount");
+
+        var system2TransactionCountElement = document.getElementById("system2-transaction-count");
+        var system2IncomeAmountElement = document.getElementById("system2-income-amount");
+        var system2OutcomeAmountElement = document.getElementById("system2-outcome-amount");
+
+        var system1TransactionCount = parseInt(system1TransactionCountElement.value);
+        var system1IncomeAmount = parseFloat(system1IncomeAmountElement.value);
+        var system1OutcomeAmount = parseFloat(system1OutcomeAmountElement.value);
+
+        var system2TransactionCount = parseInt(system2TransactionCountElement.value);
+        var system2IncomeAmount = parseFloat(system2IncomeAmountElement.value);
+        var system2OutcomeAmount = parseFloat(system2OutcomeAmountElement.value);
+
+        console.log("System 1:");
+        console.log("Number of Transactions:", system1TransactionCount);
+        console.log("Income:", system1IncomeAmount);
+        console.log("Outcome:", system1OutcomeAmount);
+
+        console.log("System 2:");
+        console.log("Number of Transactions:", system2TransactionCount);
+        console.log("Income:", system2IncomeAmount);
+        console.log("Outcome:", system2OutcomeAmount);
+
+        // Clear the input fields
+        system1TransactionCountElement.value = "";
+        system1IncomeAmountElement.value = "";
+        system1OutcomeAmountElement.value = "";
+        system2TransactionCountElement.value = "";
+        system2IncomeAmountElement.value = "";
+        system2OutcomeAmountElement.value = "";
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Bank System Report</h1>
+    <form id="data-form">
+      <fieldset>
+        <legend>System 1</legend>
+        <label for="system1-transaction-count">Number of Transactions:</label>
+        <input type="text" id="system1-transaction-count" required>
+        <label for="system1-income-amount">Income:</label>
+        <input type="text" id="system1-income-amount" required>
+        <label for="system1-outcome-amount">Outcome:</label>
+        <input type="text" id="system1-outcome-amount" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>System 2</legend>
+        <label for="system2-transaction-count">Number of Transactions:</label>
+        <input type="text" id="system2-transaction-count" required>
+        <label for="system2-income-amount">Income:</label>
+        <input type="text" id="system2-income-amount" required>
+        <label for="system2-outcome-amount">Outcome:</label>
+        <input type="text" id="system2-outcome-amount" required>
+      </fieldset>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+
+</html>
